@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  background-color: #fff;
+  color: #2d2942;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:active {
+  text-decoration: none;
+  color: #2d2942;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 14.5rem;
+}
+
+.text-bold {
+  font-weight: 600;
+  color: #2d2942;
+}
+
+.circle-link {
+  display: flex;
+  align-items: center;
+  column-gap: 2.6rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  margin-top: auto;
+  margin: auto auto 0 auto;
+  cursor: pointer;
+}
+.circle-link:active .circle-link__button::before {
+  background: linear-gradient(338deg, #fed5cb 0%, #ff9072 68%);
+}
+.circle-link__button {
+  position: relative;
+  background-color: #fff;
+  height: 5.2rem;
+  width: 5.2rem;
+  border-radius: 25rem;
+  border: 1px solid #ff9072;
+}
+.circle-link__button::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4.6rem;
+  width: 4.6rem;
+  border-radius: 25rem;
+  background-color: #ff9072;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(163deg, #fed5cb 0%, #ff9072 68%);
+}
+.circle-link__button > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.aside {
+  padding: 6.7rem 1rem 6.7rem 2.6rem;
+  border-right: 1px solid #f4f5f6;
+  width: 27rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.aside__header {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.aside__header-logo {
+  max-width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 25rem;
+}
+.aside__header-text {
+  font-size: 2.4rem;
+}
+.aside__navigation {
+  margin-top: 8rem;
+  padding-left: 2.2rem;
+}
+.aside__navigation-item {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4.3rem;
+  cursor: pointer;
+}
+.aside__navigation-item:not(:last-child) {
+  margin-bottom: 2.2rem;
+}
+.aside__navigation-item.active {
+  position: relative;
+  background: #fed5cb;
+  background-image: linear-gradient(163deg, #fed5cb 0%, #ff9072 68%);
+  padding: 2rem 1.7rem;
+  border-radius: 20px;
+  color: #fff;
+  z-index: 1;
+}
+.aside__navigation-item.active > a {
+  color: #fff;
+  z-index: 0;
+}
+.aside__navigation-item.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 20px;
+  opacity: 0;
+  background: linear-gradient(338deg, #fed5cb 0%, #ff9072 68%);
+  transition: all 0.2s ease;
+}
+.aside__navigation-item.active:hover::before {
+  opacity: 1;
+}
+.aside__honors {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aside__honors-trophy {
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 25rem;
+  background-image: linear-gradient(133deg, #aba1ff 27%, #7466fb 74%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.3rem;
+  cursor: pointer;
+}
+.aside__honors-trophy > i {
+  color: #fff;
+}
+.aside__honors-trophy:hover .aside__honors-gif {
+  display: block;
+}
+.aside__honors-gif {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.aside__honors-name {
+  margin-bottom: 1.6rem;
+}
+.aside__honors-description {
+  max-width: 164px;
+  text-align: center;
+  color: #c2c2c5;
+}
+.aside__logout {
+  display: flex;
+  align-items: center;
+  column-gap: 2.6rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  margin-top: auto;
+  margin: auto auto 0 auto;
+  cursor: pointer;
+}
+.aside__logout:active .aside__logout-circle::before {
+  background: linear-gradient(338deg, #fed5cb 0%, #ff9072 68%);
+}
+.aside__logout-circle {
+  position: relative;
+  background-color: #fff;
+  height: 5.2rem;
+  width: 5.2rem;
+  border-radius: 25rem;
+  border: 1px solid #ff9072;
+}
+.aside__logout-circle::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4.6rem;
+  width: 4.6rem;
+  border-radius: 25rem;
+  background-color: #ff9072;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(163deg, #fed5cb 0%, #ff9072 68%);
+}
+.aside__logout-circle > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 6.7rem;
+  padding: 6.7rem 2.7rem 2rem 4.3rem;
+  height: 14.5rem;
+  width: calc(100vw - 27rem);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: rgba(99, 99, 99, 0.2) 8px 2px 8px 0px;
+}
+.header__authentication {
+  margin-left: auto;
+}
+.header__user-info {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.header__user-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.header__user-avatar {
+  max-width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 25rem;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
