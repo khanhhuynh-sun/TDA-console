@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 1.1rem;
+  background-color: $background-color;
+  color: $text-dark-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:active {
+  text-decoration: none;
+  color: $text-dark-color;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main {
+  padding-top: $header-height;
+}
